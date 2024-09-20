@@ -1,0 +1,41 @@
+{
+  "name": "data-migration",
+  "private": true,
+  "scripts": {
+    "start": "NODE_OPTIONS=--max_old_space_size=12288 NODE_TLS_REJECT_UNAUTHORIZED=0 meteor run --port 3200 --raw-logs --inspect=9329 --exclude-archs web.browser,web.browser.legacy,web.cordova --settings settings.json --once",
+    "test": "TEST_CLIENT=0 meteor test --once --driver-package meteortesting:mocha --settings settings.json",
+    "test:watch": "TEST_CLIENT=0 meteor test --driver-package meteortesting:mocha --port 3200 --settings settings.json --inspect=9329",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "babel-preset-meteor": "^7.10.0",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "fetch-retry": "^5.0.4",
+    "lodash": "^4.17.21",
+    "meteor-node-stubs": "^1.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sinon": "^12.0.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "server": "server/main.js"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/eslint-parser": "^7.17.0",
+    "@meteorjs/eslint-config-meteor": "^1.0.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-meteor": "^7.3.0",
+    "eslint-plugin-react": "^7.28.0"
+  }
+}

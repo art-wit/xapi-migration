@@ -1,0 +1,66 @@
+{
+  "extends": "@meteorjs/eslint-config-meteor",
+  "parser": "@babel/eslint-parser",
+  "rules": {
+    "quote-props": "off",
+    "no-restricted-syntax": "off",
+    "no-shadow": [
+      "warn"
+    ],
+    "comma-dangle": [
+      "warn"
+    ],
+    "spaced-comment": "off",
+    "max-len": "off",
+    "object-curly-newline": "off",
+    "object-shorthand": "off",
+    "dot-notation": "off",
+    "import/prefer-default-export": "off",
+    "global-require": "off",
+    "no-else-return": "off",
+    "no-plusplus": "off",
+    "no-await-in-loop": [
+      "warn"
+    ],
+    "arrow-parens": [
+      "warn",
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "newline-per-chained-call": [
+      "error",
+      {
+        "ignoreChainWithDepth": 5
+      }
+    ],
+    "padded-blocks": [
+      "error",
+      {
+        "classes": "always"
+      }
+    ],
+    "react/destructuring-assignment": "off",
+    "lines-between-class-members": [
+      "warn",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "class-methods-use-this": "off",
+    "no-unused-expressions": "off"
+  },
+  "globals": {
+    "Assets": "readonly",
+    "Package": "readonly",
+    "Npm": "readonly",
+    "describe": "readonly",
+    "it": "readonly",
+    "before": "readonly",
+    "beforeEach": "readonly",
+    "afterEach": "readonly",
+    "after": "readonly"
+  }
+}

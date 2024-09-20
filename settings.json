@@ -1,0 +1,6 @@
+{
+  "xAPI": {
+    "endPoint": "https://learninglocker.just-example.cloud/data/xAPI",
+    "authSecret": "XXX"
+  }
+}
